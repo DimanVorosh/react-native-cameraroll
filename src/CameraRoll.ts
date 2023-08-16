@@ -38,7 +38,7 @@ export type GroupTypes =
   | 'Library'
   | 'PhotoStream'
   | 'SavedPhotos'
-  | 'SmartAlbum'
+  | 'SmartAlbum';
 
 export type SubTypes =
   | 'PhotoPanorama'
@@ -61,7 +61,7 @@ export type Include =
 
 export type AssetType = 'All' | 'Videos' | 'Photos';
 
-export type AlbumType = 'All' | 'Album' | 'SmartAlbum'
+export type AlbumType = 'All' | 'Album' | 'SmartAlbum';
 
 /**
  * Shape of the param arg for the `getPhotos` function.
@@ -171,6 +171,7 @@ export type GetAlbumsParams = {
 
 export type Album = {
   title: string;
+  type: AlbumType;
   count: number;
 };
 

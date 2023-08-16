@@ -2,9 +2,11 @@
 // we use Object type because methods on the native side use NSDictionary and ReadableMap
 // and we want to stay compatible with those
 import {TurboModuleRegistry, TurboModule} from 'react-native';
+import type {AlbumType} from './CameraRoll';
 
 type Album = {
   title: string;
+  type: AlbumType;
   count: number;
 };
 
