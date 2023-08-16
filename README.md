@@ -1,24 +1,17 @@
-# `@react-native-camera-roll/camera-roll`
+# `react-native-smart-album-camera-roll`
 
 [![CircleCI Status][circle-ci-badge]][circle-ci]
 ![Supports Android and iOS][supported-os-badge]
 ![MIT License][license-badge]
 [![Lean Core Badge][lean-core-badge]][lean-core-issue]
 
-## *Notice*: The NPM package name has changed, please change your package.json dependency! 
-
-Previous package name: @react-native-community/cameraroll
-
-New package name: @react-native-camera-roll/camera-roll
-
-
 ## Getting started
 
-`$ npm install @react-native-camera-roll/camera-roll --save`
+`$ npm install react-native-smart-album-camera-roll --save`
 
 ### Mostly automatic installation
 
-`$ react-native link @react-native-camera-roll/camera-roll && npx pod-install`
+`$ react-native link react-native-smart-album-camera-roll && npx pod-install`
 
 ### Manual installation
 
@@ -26,7 +19,7 @@ New package name: @react-native-camera-roll/camera-roll
 #### iOS
 
 1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
-2. Go to `node_modules` ➜ `@react-native-camera-roll/camera-roll` and add `RNCCameraroll.xcodeproj`
+2. Go to `node_modules` ➜ `react-native-smart-album-camera-roll` and add `RNCCameraroll.xcodeproj`
 3. In XCode, in the project navigator, select your project. Add `libRNCCameraroll.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
 4. Run your project (`Cmd+R`)<
 
@@ -38,7 +31,7 @@ New package name: @react-native-camera-roll/camera-roll
 2. Append the following lines to `android/settings.gradle`:
   	```
   	include ':@react-native-camera-roll_camera-roll'
-  	project(':@react-native-camera-roll_camera-roll').projectDir = new File(rootProject.projectDir, 	'../node_modules/@react-native-camera-roll/camera-roll/android')
+  	project(':@react-native-camera-roll_camera-roll').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-smart-album-camera-roll/android')
   	```
 3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
   	```
@@ -55,7 +48,7 @@ import { CameraRoll } from "react-native";
 to:
 
 ```javascript
-import { CameraRoll } from "@react-native-camera-roll/camera-roll";
+import { CameraRoll } from "react-native-smart-album-camera-roll";
 ```
 
 ## Usage
@@ -94,7 +87,7 @@ Then you have to explicitly ask for the permission
 
 ```javascript
 import { PermissionsAndroid, Platform } from "react-native";
-import { CameraRoll } from "@react-native-camera-roll/camera-roll";
+import { CameraRoll } from "react-native-smart-album-camera-roll";
 
 async function hasAndroidPermission() {
   const getCheckPermissionPromise = () => {
@@ -323,7 +316,7 @@ render() {
 Loading images with listeners and refetchs:
 
 ```javascript
-import { CameraRoll, cameraRollEventEmitter } from '@react-native-camera-roll/camera-roll';
+import { CameraRoll, cameraRollEventEmitter } from 'react-native-smart-album-camera-roll';
 
 import { useCallback, useEffect, useState } from 'react';
 
@@ -511,7 +504,7 @@ catch (error) {}
 ```javascript
 import React, {useEffect} from 'react';
 import {Button} from 'react-native';
-import {useCameraRoll} from "@react-native-camera-roll/camera-roll";
+import {useCameraRoll} from "react-native-smart-album-camera-roll";
 
 function Example() {
   const [photos, getPhotos, save] = useCameraRoll();
@@ -534,6 +527,6 @@ If you try to save media into specific album without asking for read and write p
 [circle-ci-badge]:https://img.shields.io/circleci/project/github/react-native-cameraroll/react-native-cameraroll/master.svg?style=flat-square
 [circle-ci]:https://circleci.com/gh/react-native-cameraroll/workflows/react-native-cameraroll/tree/master
 [supported-os-badge]:https://img.shields.io/badge/platforms-android%20|%20ios-lightgrey.svg?style=flat-square
-[license-badge]:https://img.shields.io/npm/l/@react-native-camera-roll/camera-roll.svg?style=flat-square
+[license-badge]:https://img.shields.io/npm/l/react-native-smart-album-camera-roll.svg?style=flat-square
 [lean-core-badge]: https://img.shields.io/badge/Lean%20Core-Extracted-brightgreen.svg?style=flat-square
 [lean-core-issue]: https://github.com/facebook/react-native/issues/23313
