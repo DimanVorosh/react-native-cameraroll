@@ -2,7 +2,7 @@
   "name": "react-native-smart-album-camera-roll",
   "author": "Dmitry Voroshillo <darkknight89012@gmail.com>",
   "homepage": "https://github.com/react-native-cameraroll/react-native-cameraroll#readme",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React Native Camera Roll for iOS & Android",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
