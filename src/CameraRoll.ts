@@ -13,8 +13,15 @@ const GROUP_TYPES_OPTIONS = {
   Event: 'Event',
   Faces: 'Faces',
   Library: 'Library',
+  SmartAlbum: 'SmartAlbum',
   PhotoStream: 'PhotoStream',
   SavedPhotos: 'SavedPhotos',
+};
+
+const ALBUM_TYPE_OPTIONS = {
+  All: 'All',
+  Album: 'Album',
+  SmartAlbum: 'SmartAlbum',
 };
 
 const ASSET_TYPE_OPTIONS = {
@@ -30,7 +37,8 @@ export type GroupTypes =
   | 'Faces'
   | 'Library'
   | 'PhotoStream'
-  | 'SavedPhotos';
+  | 'SavedPhotos'
+  | 'SmartAlbum'
 
 export type SubTypes =
   | 'PhotoPanorama'
@@ -52,6 +60,8 @@ export type Include =
   | 'orientation';
 
 export type AssetType = 'All' | 'Videos' | 'Photos';
+
+export type AlbumType = 'All' | 'Album' | 'SmartAlbum'
 
 /**
  * Shape of the param arg for the `getPhotos` function.
@@ -156,6 +166,7 @@ export type SaveToCameraRollOptions = {
 
 export type GetAlbumsParams = {
   assetType?: AssetType;
+  albumType?: AlbumType;
 };
 
 export type Album = {
@@ -171,6 +182,7 @@ export type Album = {
 export class CameraRoll {
   static GroupTypesOptions = GROUP_TYPES_OPTIONS;
   static AssetTypeOptions = ASSET_TYPE_OPTIONS;
+  static AlbumTypeOptions = ALBUM_TYPE_OPTIONS;
 
   /**
    * On iOS: requests deletion of a set of photos from the camera roll.
@@ -213,7 +225,7 @@ export class CameraRoll {
   }
 
   static getAlbums(
-    params: GetAlbumsParams = {assetType: 'All'},
+    params: GetAlbumsParams = {assetType: 'All', albumType: 'Album'},
   ): Promise<Album[]> {
     return RNCCameraRoll.getAlbums(params);
   }
