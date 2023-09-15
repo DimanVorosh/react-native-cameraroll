@@ -5,7 +5,7 @@ package = JSON.parse(File.read(File.join(__dir__, 'package.json')))
 fabric_enabled = ENV['RCT_NEW_ARCH_ENABLED'] == '1'
 
 Pod::Spec.new do |s|
-  s.name         = "react-native-cameraroll"
+  s.name         = "react-native-smart-cameraroll"
   s.version      = package['version']
   s.summary      = package['description']
   s.license      = package['license']
